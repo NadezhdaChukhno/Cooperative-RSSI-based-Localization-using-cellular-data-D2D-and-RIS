@@ -1,6 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% This code generates Fig.6(d) nLoS, random placement of relays within 100 m x 100 m.                                                   %
-% Article: [name]                                                                %
+%This code generates Fig.6(d) nLoS, random placement of relays within 100m x 100m%                                                   %
+% Article: [D2D-aided versus RIS-aided Cooperative Positioning: Theoretical Model% 
+% for RSSI-based Ranging and Performance Comparison]                             % 
 % Download article: [link]                                                       %
 % This is version 1.0 (Last edited: 2022-07-13)                                  %
 % Author: N. Chukhno                                                             %

@@ -1,6 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % This code generates Fig.2 SNR comparison of RIS and relays                     %
-% Article: [name]                                                                %
+% Article: [D2D-aided versus RIS-aided Cooperative Positioning: Theoretical Model% 
+% for RSSI-based Ranging and Performance Comparison]                             % 
 % Download article: [link]                                                       %
 % This is version 1.0 (Last edited: 2022-07-13)                                  %
 % Author: N. Chukhno                                                             %

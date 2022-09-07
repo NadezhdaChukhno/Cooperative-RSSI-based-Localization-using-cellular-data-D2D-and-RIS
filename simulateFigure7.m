@@ -1,7 +1,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % This code generates Fig.7 CDF of individual error, SNR for RIS with% different %
 % number of antenna elements, LOS, PLE=2.1, SF=4.                                %                              %
-% Article: [name]                                                                %
+% Article: [D2D-aided versus RIS-aided Cooperative Positioning: Theoretical Model% 
+% for RSSI-based Ranging and Performance Comparison]                             % 
 % Download article: [link]                                                       %
 % This is version 1.0 (Last edited: 2022-07-14)                                  %
 % Author: N. Chukhno                                                             %

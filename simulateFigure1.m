@@ -1,7 +1,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % This code generates Fig.1 LoS probability as a function of 2D distance between % 
 % the BS and the MT according to 3GPP UMi Street Canyon model.                   %
-% Article: [name]                                                                %
+% Article: [D2D-aided versus RIS-aided Cooperative Positioning: Theoretical Model% 
+% for RSSI-based Ranging and Performance Comparison]                             % 
 % Download article: [link]                                                       %
 % This is version 1.0 (Last edited: 2022-07-13)                                  %
 % Author: N. Chukhno                                                             %

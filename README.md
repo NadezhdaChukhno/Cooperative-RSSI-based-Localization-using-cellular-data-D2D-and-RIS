@@ -1,13 +1,9 @@
-Are D2D and RIS in the Same League?
-Cooperative RSSI-based Localization Model and
-Performance Comparison
+D2D-aided versus RIS-aided Cooperative Positioning: Theoretical Model for RSSI-based Ranging and Performance Comparison
 ==================
 
 This code package is related to the following article:
 
-Nadezhda Chukhno, Sergio Trilles, Joaqu ́ın Torres-Sospedra, Antonio Iera, and Giuseppe Araniti, “[Are D2D and RIS in the Same League?
-Cooperative RSSI-based Localization Model and
-Performance Comparison] (link)
+Nadezhda Chukhno, Sergio Trilles, Joaqu ́ın Torres-Sospedra, Antonio Iera, and Giuseppe Araniti, “[D2D-aided versus RIS-aided Cooperative Positioning: Theoretical Model for RSSI-based Ranging and Performance Comparison]“ (link)
 
 **Reproducible research.** The package contains a MATLAB simulation environment that reproduces some the numerical results and figures in the article. 
 
