@@ -1,15 +1,16 @@
 clear all 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % This is the main code.                                                         %
-% Article: [D2D-aided versus RIS-aided Cooperative Positioning: Theoretical Model% 
-% for RSSI-based Ranging and Performance Comparison]                             %                                  %
+% Article: [Are D2D and RIS in the Same League? Cooperative RSSI-based 
+% Localization Model and Performance Comparison]                                 % 
 % Download article: [link]                                                       %
-% This is version 1.0 (Last edited: 2022-07-14)                                  %
+% This is version 2.0 (Last edited: 2023-03-16)                                  %
 % Author: N. Chukhno                                                             %
 % University Mediterranea of Reggio Calabria, Italy and CNIT, Italy.             %
 % Universitat Jaume I, Spain                                                     %
 % Email: nadezda.chukhno@unirc.it                                                %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 %% RSS  location estimation
 %% parameters

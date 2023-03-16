@@ -1,10 +1,10 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % This code generates Fig.7 CDF of individual error, SNR for RIS with% different %
 % number of antenna elements, LOS, PLE=2.1, SF=4.                                %                              %
-% Article: [D2D-aided versus RIS-aided Cooperative Positioning: Theoretical Model% 
-% for RSSI-based Ranging and Performance Comparison]                             % 
+% Article: [Are D2D and RIS in the Same League? Cooperative RSSI-based 
+% Localization Model and Performance Comparison]                                 % 
 % Download article: [link]                                                       %
-% This is version 1.0 (Last edited: 2022-07-14)                                  %
+% This is version 2.0 (Last edited: 2023-03-16)                                  %
 % Author: N. Chukhno                                                             %
 % University Mediterranea of Reggio Calabria, Italy and CNIT, Italy.             %
 % Universitat Jaume I, Spain                                                     %
@@ -75,48 +75,48 @@ for index_run=1:runs
 
                     if mode_RIS==1
                         NN=8;
-                        [estimanted_pos_RIS1(index_user,:),snr_1(index_user,:)]=estimated_coordinate_RSS_RIS_new(realX,realY,X_a1,Y_a1,X_a2,Y_a2,X_a3,Y_a3,X_a4,Y_a4,X,X_a1_BS,X_a2_BS,X_a3_BS,X_a4_BS,Y_a1_BS,Y_a2_BS,Y_a3_BS,Y_a4_BS,NN);
+                        [estimanted_pos_RIS1(index_user,:),snr_1(index_user,:)]=estimated_coordinate_RSS_RIS_fig7(realX,realY,X_a1,Y_a1,X_a2,Y_a2,X_a3,Y_a3,X_a4,Y_a4,X,X_a1_BS,X_a2_BS,X_a3_BS,X_a4_BS,Y_a1_BS,Y_a2_BS,Y_a3_BS,Y_a4_BS,NN);
                         error_RIS1(index_counter,:)=real(sqrt( (estimanted_pos_RIS1(index_user,1)- realX).^2 + ( estimanted_pos_RIS1(index_user,2)- realY).^2 )); %% 
                         snr1(index_counter,:)=snr_1(index_user,:);
                     elseif  mode_RIS==2
                         NN=16;
-                        [estimanted_pos_RIS2(index_user,:),snr_2(index_user,:)]=estimated_coordinate_RSS_RIS_new(realX,realY,X_a1,Y_a1,X_a2,Y_a2,X_a3,Y_a3,X_a4,Y_a4,X,X_a1_BS,X_a2_BS,X_a3_BS,X_a4_BS,Y_a1_BS,Y_a2_BS,Y_a3_BS,Y_a4_BS,NN);
+                        [estimanted_pos_RIS2(index_user,:),snr_2(index_user,:)]=estimated_coordinate_RSS_RIS_fig7(realX,realY,X_a1,Y_a1,X_a2,Y_a2,X_a3,Y_a3,X_a4,Y_a4,X,X_a1_BS,X_a2_BS,X_a3_BS,X_a4_BS,Y_a1_BS,Y_a2_BS,Y_a3_BS,Y_a4_BS,NN);
                         error_RIS2(index_counter,:)=real(sqrt( (estimanted_pos_RIS2(index_user,1)- realX).^2 + ( estimanted_pos_RIS2(index_user,2)- realY).^2 )); %% 
                         snr2(index_counter,:)=snr_2(index_user,:);
                     elseif  mode_RIS==3
                         NN=32;
-                        [estimanted_pos_RIS3(index_user,:),snr_3(index_user,:)]=estimated_coordinate_RSS_RIS_new(realX,realY,X_a1,Y_a1,X_a2,Y_a2,X_a3,Y_a3,X_a4,Y_a4,X,X_a1_BS,X_a2_BS,X_a3_BS,X_a4_BS,Y_a1_BS,Y_a2_BS,Y_a3_BS,Y_a4_BS,NN);
+                        [estimanted_pos_RIS3(index_user,:),snr_3(index_user,:)]=estimated_coordinate_RSS_RIS_fig7(realX,realY,X_a1,Y_a1,X_a2,Y_a2,X_a3,Y_a3,X_a4,Y_a4,X,X_a1_BS,X_a2_BS,X_a3_BS,X_a4_BS,Y_a1_BS,Y_a2_BS,Y_a3_BS,Y_a4_BS,NN);
                         error_RIS3(index_counter,:)=real(sqrt( (estimanted_pos_RIS3(index_user,1)- realX).^2 + ( estimanted_pos_RIS3(index_user,2)- realY).^2 )); %% 
                         snr3(index_counter,:)=snr_3(index_user,:);
                     elseif  mode_RIS==4
                         NN=64;
-                        [estimanted_pos_RIS4(index_user,:),snr_4(index_user,:)]=estimated_coordinate_RSS_RIS_new(realX,realY,X_a1,Y_a1,X_a2,Y_a2,X_a3,Y_a3,X_a4,Y_a4,X,X_a1_BS,X_a2_BS,X_a3_BS,X_a4_BS,Y_a1_BS,Y_a2_BS,Y_a3_BS,Y_a4_BS,NN);
+                        [estimanted_pos_RIS4(index_user,:),snr_4(index_user,:)]=estimated_coordinate_RSS_RIS_fig7(realX,realY,X_a1,Y_a1,X_a2,Y_a2,X_a3,Y_a3,X_a4,Y_a4,X,X_a1_BS,X_a2_BS,X_a3_BS,X_a4_BS,Y_a1_BS,Y_a2_BS,Y_a3_BS,Y_a4_BS,NN);
                         error_RIS4(index_counter,:)=real(sqrt( (estimanted_pos_RIS4(index_user,1)- realX).^2 + ( estimanted_pos_RIS4(index_user,2)- realY).^2 )); %% 
                         snr4(index_counter,:)=snr_4(index_user,:); 
                     elseif  mode_RIS==5
                         NN=128;
-                        [estimanted_pos_RIS5(index_user,:),snr_5(index_user,:)]=estimated_coordinate_RSS_RIS_new(realX,realY,X_a1,Y_a1,X_a2,Y_a2,X_a3,Y_a3,X_a4,Y_a4,X,X_a1_BS,X_a2_BS,X_a3_BS,X_a4_BS,Y_a1_BS,Y_a2_BS,Y_a3_BS,Y_a4_BS,NN);
+                        [estimanted_pos_RIS5(index_user,:),snr_5(index_user,:)]=estimated_coordinate_RSS_RIS_fig7(realX,realY,X_a1,Y_a1,X_a2,Y_a2,X_a3,Y_a3,X_a4,Y_a4,X,X_a1_BS,X_a2_BS,X_a3_BS,X_a4_BS,Y_a1_BS,Y_a2_BS,Y_a3_BS,Y_a4_BS,NN);
                         error_RIS5(index_counter,:)=real(sqrt( (estimanted_pos_RIS5(index_user,1)- realX).^2 + ( estimanted_pos_RIS5(index_user,2)- realY).^2 )); %% 
                         snr5(index_counter,:)=snr_5(index_user,:); 
                        
                     elseif  mode_RIS==6
                          NN=256;
-                        [estimanted_pos_RIS6(index_user,:),snr_6(index_user,:)]=estimated_coordinate_RSS_RIS_new(realX,realY,X_a1,Y_a1,X_a2,Y_a2,X_a3,Y_a3,X_a4,Y_a4,X,X_a1_BS,X_a2_BS,X_a3_BS,X_a4_BS,Y_a1_BS,Y_a2_BS,Y_a3_BS,Y_a4_BS,NN);
+                        [estimanted_pos_RIS6(index_user,:),snr_6(index_user,:)]=estimated_coordinate_RSS_RIS_fig7(realX,realY,X_a1,Y_a1,X_a2,Y_a2,X_a3,Y_a3,X_a4,Y_a4,X,X_a1_BS,X_a2_BS,X_a3_BS,X_a4_BS,Y_a1_BS,Y_a2_BS,Y_a3_BS,Y_a4_BS,NN);
                         error_RIS6(index_counter,:)=real(sqrt( (estimanted_pos_RIS6(index_user,1)- realX).^2 + ( estimanted_pos_RIS6(index_user,2)- realY).^2 )); %% 
                         snr6(index_counter,:)=snr_6(index_user,:);
                     elseif  mode_RIS==7
                         NN=512;
-                        [estimanted_pos_RIS7(index_user,:),snr_7(index_user,:)]=estimated_coordinate_RSS_RIS_new(realX,realY,X_a1,Y_a1,X_a2,Y_a2,X_a3,Y_a3,X_a4,Y_a4,X,X_a1_BS,X_a2_BS,X_a3_BS,X_a4_BS,Y_a1_BS,Y_a2_BS,Y_a3_BS,Y_a4_BS,NN);
+                        [estimanted_pos_RIS7(index_user,:),snr_7(index_user,:)]=estimated_coordinate_RSS_RIS_fig7(realX,realY,X_a1,Y_a1,X_a2,Y_a2,X_a3,Y_a3,X_a4,Y_a4,X,X_a1_BS,X_a2_BS,X_a3_BS,X_a4_BS,Y_a1_BS,Y_a2_BS,Y_a3_BS,Y_a4_BS,NN);
                         error_RIS7(index_counter,:)=real(sqrt( (estimanted_pos_RIS7(index_user,1)- realX).^2 + ( estimanted_pos_RIS7(index_user,2)- realY).^2 )); %% 
                         snr7(index_counter,:)=snr_7(index_user,:);
                     elseif  mode_RIS==8
                         NN=1024;
-                        [estimanted_pos_RIS8(index_user,:),snr_8(index_user,:)]=estimated_coordinate_RSS_RIS_new(realX,realY,X_a1,Y_a1,X_a2,Y_a2,X_a3,Y_a3,X_a4,Y_a4,X,X_a1_BS,X_a2_BS,X_a3_BS,X_a4_BS,Y_a1_BS,Y_a2_BS,Y_a3_BS,Y_a4_BS,NN);
+                        [estimanted_pos_RIS8(index_user,:),snr_8(index_user,:)]=estimated_coordinate_RSS_RIS_fig7(realX,realY,X_a1,Y_a1,X_a2,Y_a2,X_a3,Y_a3,X_a4,Y_a4,X,X_a1_BS,X_a2_BS,X_a3_BS,X_a4_BS,Y_a1_BS,Y_a2_BS,Y_a3_BS,Y_a4_BS,NN);
                         error_RIS8(index_counter,:)=real(sqrt( (estimanted_pos_RIS8(index_user,1)- realX).^2 + ( estimanted_pos_RIS8(index_user,2)- realY).^2 )); %% 
                         snr8(index_counter,:)=snr_8(index_user,:);
                     elseif  mode_RIS==9
                         NN=2048;
-                        [estimanted_pos_RIS9(index_user,:),snr_9(index_user,:)]=estimated_coordinate_RSS_RIS_new(realX,realY,X_a1,Y_a1,X_a2,Y_a2,X_a3,Y_a3,X_a4,Y_a4,X,X_a1_BS,X_a2_BS,X_a3_BS,X_a4_BS,Y_a1_BS,Y_a2_BS,Y_a3_BS,Y_a4_BS,NN);
+                        [estimanted_pos_RIS9(index_user,:),snr_9(index_user,:)]=estimated_coordinate_RSS_RIS_fig7(realX,realY,X_a1,Y_a1,X_a2,Y_a2,X_a3,Y_a3,X_a4,Y_a4,X,X_a1_BS,X_a2_BS,X_a3_BS,X_a4_BS,Y_a1_BS,Y_a2_BS,Y_a3_BS,Y_a4_BS,NN);
                         error_RIS9(index_counter,:)=real(sqrt( (estimanted_pos_RIS9(index_user,1)- realX).^2 + ( estimanted_pos_RIS9(index_user,2)- realY).^2 )); %% 
                         snr9(index_counter,:)=snr_9(index_user,:);    
                     end
@@ -128,6 +128,7 @@ for index_run=1:runs
     end
  
 end      
+%  load('RIS_all_LOS.mat'); 
 
  figure
   [h_RIS1,stats_RIS1] = cdfplot(error_RIS1);
@@ -204,7 +205,7 @@ srt_d2d5={strcat('RIS 128, \mu=',num2str(stats_snr5.mean,'%.2f'))};
  srt_d2d9={strcat('RIS 2048, \mu=',num2str(stats_snr9.mean,'%.2f'))};
  legend(srt_d2d1{1,1},srt_d2d2{1,1},srt_d2d3{1,1},srt_d2d4{1,1},srt_d2d5{1,1},srt_d2d6{1,1},srt_d2d7{1,1},srt_d2d8{1,1},srt_d2d9{1,1},'Location','best')
  ylabel('CDF of SNR')
- xlabel('SNR, dBm')
+ xlabel('SNR, dB')
  set(h_RIS1,'LineWidth',1.5)
  set(h_RIS2,'LineWidth',1.5)
  set(h_RIS3,'LineWidth',1.5)
