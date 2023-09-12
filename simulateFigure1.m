@@ -1,9 +1,9 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% This code generates Fig.2 SNR comparison of RIS and relays                     %
+% This code generates Fig.1 SNR comparison of RIS and relays                     %
 % Article: [Are D2D and RIS in the Same League? Cooperative RSSI-based 
 % Localization Model and Performance Comparison]                                 % 
 % Download article: [link]                                                       %
-% This is version 2.0 (Last edited: 2023-03-16)                                  %
+% This is version 3.0 (Last edited: 2023-09-06)                                  %
 % Author: N. Chukhno                                                             %
 % University Mediterranea of Reggio Calabria, Italy and CNIT, Italy.             %
 % Universitat Jaume I, Spain                                                     %
@@ -13,46 +13,46 @@
 clc
 clear all
 %% parameters 
-frequency=28; % frequency [GHz]
-N0=10^(-174/10); % power spectral density of noise, N0 
+frequency = 28; % frequency [GHz]
+N0 = 10^(-174/10); % power spectral density of noise, N0 
 Pt_dBm = 23.010299957; % transmit power [dB]
 Pt = 10^(Pt_dBm/10)/1000; % transmit power[W]
-W=1;% bandwidth [GHz]
-W_snr=1000000000; % bandwidth [Hz]
-G_rx=5.57; % received gain [dBi]
-G_rx_lin=10^(G_rx/10); % received gain [linear scale]
-G =14.58; % transmit gain [dBi] (32 antenna elements)
-G_lin =10^(G/10);  % transmit gain in linear scale
-distance=100; % transmission distance [m] between tranmitter and reciever    
+W = 1;% bandwidth [GHz]
+W_snr = 1000000000; % bandwidth [Hz]
+G_rx = 5.57; % received gain [dBi]
+G_rx_lin = 10^(G_rx/10); % received gain [linear scale]
+G = 14.58; % transmit gain [dBi] (32 antenna elements)
+G_lin = 10^(G/10);  % transmit gain in linear scale
+distance = 100; % transmission distance [m] between tranmitter and reciever    
 
 %% RIS parameters
-Gamma=1; % reflection gain from RIS
+Gamma = 1; % reflection gain from RIS
 NN = [256,1024,2048]; % number of reflective elements 
-a=0.1:0.1:0.9; %at which distance from BS/UE we need to place RIS (0y axis on Figure 2)
+a = 0.1:0.1:0.9; %at which distance from BS/UE we need to place RIS (0y axis on Figure 2)
 
 %% simulation
-for i=1:length(a)
-    for n=1:length(NN)
-        total_loss_nB_SR(i)=10^(2*log10(frequency)+3.24)*(a(i)*distance)^(2.1); % linear non blocked path loss 
-        total_loss_nB_RD(i)=10^(2*log10(frequency)+3.24)*((1-a(i))*distance)^(2.1); % linear non blocked path loss
-        total_loss_nB(i)=   10^(2*log10(frequency)+3.24)*(distance)^(3.19); %NLOS no bl
-        total_loss_nB2(i)=  10^(2*log10(frequency)+4.74)*(distance)^(2.1);% LOS bl
-        
-        % total path loss
-        LRIS(i,n)=((sqrt((1/(total_loss_nB_SR(i)*total_loss_nB_RD(i)))))*NN(n))^(-2); % formula (23) from article
+for i = 1:length(a)
+   for n=1:length(NN)
+      total_loss_nB_SR(i) = 10^(2*log10(frequency) + 3.24)*(a(i)*distance)^(2.1); % linear non blocked path loss 
+      total_loss_nB_RD(i) = 10^(2*log10(frequency) + 3.24)*((1 - a(i))*distance)^(2.1); % linear non blocked path loss
+      total_loss_nB(i) = 10^(2*log10(frequency) + 3.24)*(distance)^(3.19); %NLOS no bl
+      total_loss_nB2(i) = 10^(2*log10(frequency) + 4.74)*(distance)^(2.1);% LOS bl
+      
+      % total path loss
+      LRIS(i,n) = ((sqrt((1/(total_loss_nB_SR(i)*total_loss_nB_RD(i)))))*NN(n))^(-2); % formula (23) from article
 
-        % snr
-        SNR_watt(i,n)=((Pt*G_rx_lin*G_lin*Gamma)/(N0*W_snr*LRIS(i,n))); 
-        snr(i,n)=real(10*log10(1000*SNR_watt(i,n)));   %W is in Hz   
-         
-        %snr without RIS NLOS no blockage
-        SNR_watt_woRIS(i,n)=(Pt*G_rx_lin*G_lin)/(N0*W_snr*total_loss_nB(i));
-        snr_woRIS(i,n)=real(10*log10(1000*SNR_watt_woRIS(i,n)));    %W is in Hz   
-        
-        %snr without RIS LOS blockage
-        SNR_watt_woRIS2(i,n)=(Pt*G_rx_lin*G_lin)/(N0*W_snr*total_loss_nB2(i)); 
-        snr_woRIS2(i,n)=real(10*log10(1000*SNR_watt_woRIS2(i,n)));    %W is in Hz   
-    end
+      % snr
+      SNR_watt(i,n) = ((Pt*G_rx_lin*G_lin*Gamma)/(N0*W_snr*LRIS(i,n))); 
+      snr(i,n) = real(10*log10(1000*SNR_watt(i,n)));   %W is in Hz   
+      
+      %snr without RIS NLOS no blockage
+      SNR_watt_woRIS(i,n) = (Pt*G_rx_lin*G_lin)/(N0*W_snr*total_loss_nB(i));
+      snr_woRIS(i,n) = real(10*log10(1000*SNR_watt_woRIS(i,n)));    %W is in Hz   
+      
+      %snr without RIS LOS blockage
+      SNR_watt_woRIS2(i,n) = (Pt*G_rx_lin*G_lin)/(N0*W_snr*total_loss_nB2(i)); 
+      snr_woRIS2(i,n) = real(10*log10(1000*SNR_watt_woRIS2(i,n)));    %W is in Hz   
+   end
 end
 
 %% Plot the curves
