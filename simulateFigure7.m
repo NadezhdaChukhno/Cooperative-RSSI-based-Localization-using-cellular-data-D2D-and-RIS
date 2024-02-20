@@ -1,5 +1,5 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% This is code that generates plot with pdf of noise (Fig. 6).                                                        %
+% This is code that generates plot with pdf of noise (Fig. 7).                                                        %
 % Article: [Are D2D and RIS in the Same League? Cooperative RSSI-based 
 % Localization Model and Performance Comparison]                                 % 
 % Download article: [link]                                                       %
