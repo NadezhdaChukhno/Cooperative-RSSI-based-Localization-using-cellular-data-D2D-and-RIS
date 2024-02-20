@@ -1,5 +1,5 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%This code creates Figure 7d and Table VIId
+%This code creates Figure 8d and Table VIId
 % Article: [Are D2D and RIS in the Same League? Cooperative RSSI-based 
 % Localization Model and Performance Comparison]                                 % 
 % Download article: [link]                                                       %
