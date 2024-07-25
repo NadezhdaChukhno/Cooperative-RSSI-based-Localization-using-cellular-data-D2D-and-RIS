@@ -10,7 +10,7 @@
 % Email: nadezda.chukhno@unirc.it                                                %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-load('figure7b.mat')
+load('figure8b.mat')
 figure(1)
 [h_cel,stats_cel] = cdfplot(error_cel);
 hold on

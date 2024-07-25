@@ -11,7 +11,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-load('figure7a.mat')
+load('figure8a.mat')
 figure(1)
 [h_cel,stats_cel] = cdfplot(error_cel);
 hold on
